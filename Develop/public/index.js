@@ -1,47 +1,13 @@
-
-const express = require("express");
-const fs = require("fs");
-const http = require('http');
-const path = require("path");
-const intro = require("index.html");
-const note = require("./notes.html")
-
-app = express();
-
-const PORT = 8080;
-
-
-app.use(express.urlencoded({extended: true}));
-app.use(express.json());
-
-
-app.get("*", (res, req) => res.sendFile(path.join(__dirname, "index.html")));
-app.get("/", (res, req) => res.sendFile(path.join(__dirname, "notes.html")));
-
-app.post("/api/notes",(req, res) => {
-  const notes = req.body;
-
-  console.log(notes);
-
-  notes.push(notes);
-  res.json(notes)
-
-
-});
-
-
-app.listen (PORT,() => console.log(`App listening on PORT${PORT}`));
-
-
 let noteTitle;
 let noteText;
 let saveNoteBtn;
 let newNoteBtn;
 let noteList;
 
+
 if (window.location.pathname === '/notes') {
-  noteTitle = document.querySelector('.note-title');
-  noteText = document.querySelector('.note-textarea');
+  noteTitle = document.getElementById('note-title');
+  noteText = document.getElementById('note-textarea');
   saveNoteBtn = document.querySelector('.save-note');
   newNoteBtn = document.querySelector('.new-note');
   noteList = document.querySelectorAll('.list-container .list-group');
@@ -57,6 +23,7 @@ const hide = (elem) => {
   elem.style.display = 'none';
 };
 
+
 // activeNote is used to keep track of the note in the textarea
 let activeNote = {};
 
@@ -68,14 +35,15 @@ const getNotes = () =>
     },
   });
 
-const saveNote = (note) =>
-  fetch('/api/notes', {
+const saveNote = (note) => {
+
+  return fetch('/api/notes', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(note),
-  });
+  })};
 
 const deleteNote = (id) =>
   fetch(`/api/notes/${id}`, {
@@ -85,6 +53,7 @@ const deleteNote = (id) =>
     },
   });
 
+  
 const renderActiveNote = () => {
   hide(saveNoteBtn);
 
@@ -128,6 +97,7 @@ const handleNoteDelete = (e) => {
   });
 };
 
+
 // Sets the activeNote and displays it
 const handleNoteView = (e) => {
   e.preventDefault();
@@ -148,6 +118,7 @@ const handleRenderSaveBtn = () => {
     show(saveNoteBtn);
   }
 };
+
 
 // Render the list of note titles
 const renderNoteList = async (notes) => {
@@ -202,6 +173,7 @@ const renderNoteList = async (notes) => {
   }
 };
 
+
 // Gets notes from the db and renders them to the sidebar
 const getAndRenderNotes = () => getNotes().then(renderNoteList);
 
@@ -212,4 +184,18 @@ if (window.location.pathname === '/notes') {
   noteText.addEventListener('keyup', handleRenderSaveBtn);
 }
 
-getAndRenderNotes();
+
+
+// In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
+  // In essence, when the user hits submit, document.getElementById grabs all of the fields then sends a post request to our api
+  // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
+  // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
+  const submitBtn = document.querySelector('.save-note');
+  submitBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+
+  });
+
+  getAndRenderNotes();
+  
