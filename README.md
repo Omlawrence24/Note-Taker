@@ -15,7 +15,7 @@
  * [Preview](#Preview)
  
   ## Installation
-  Install NPM, Bootstrap, 
+  Install NPM, Bootstrap
  
 
   ## Usage
@@ -39,13 +39,7 @@
  ## Preview 
  
  Intro Page
- ![prot 1](https://user-images.githubusercontent.com/73300219/114570030-7aaf9000-9c43-11eb-8cdf-9481bb408999.PNG)
- 
- About Me
- ![port 2](https://user-images.githubusercontent.com/73300219/114570835-278a0d00-9c44-11eb-85c9-866039a166ca.PNG)
-
- Contact Page
- ![port 3](https://user-images.githubusercontent.com/73300219/114570931-3e306400-9c44-11eb-8a65-e9eabdb854ba.PNG)
+ .githubusercontent.com/73300219/114570931-3e306400-9c44-11eb-8a65-e9eabdb854ba.PNG)
 
 
 
