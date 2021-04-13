@@ -3,7 +3,8 @@
   ### MIT
   
   ## Description
-  Note Taker that can be used to write and save notes. This application will use an        Express.js back end and will save and retrieve note data from a JSON file.
+  Note Taker that can be used to write and save notes. This application will
+  use and Express.js back end and will save and retrieve note data from a JSON file.
   
   ## Table of Contents
  * [Installation](#installation)
@@ -14,17 +15,19 @@
  * [Preview](#Preview)
  
   ## Installation
-  Install NPM, BootStrap
+  Install NPM, Bootstrap, 
  
 
   ## Usage
-  Used as a Protfolio to give employers a more indepth look at Obedia Lawrence Past, Employment and Personality.
+  This site allows a user to have a site of thier very own 
+   stored data catered to there to do list. The user has the means to add an delete info need
+    through out the day.
 
   ## License
   MIT
 
   ## Technology
-  HTML, CSS, VS Code, CDN
+  HTML, CSS, VS Code, JavaScript, Local Storage
 
   ## Developer
   Obedia Lawrence
