@@ -36,7 +36,7 @@
   
   [Omlawrence24](https://github.com/Omlawrence24) 
  
- ## Preview 
+ ## Preview
  
  Intro Page
  .githubusercontent.com/73300219/114570931-3e306400-9c44-11eb-8a65-e9eabdb854ba.PNG)
