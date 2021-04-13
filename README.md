@@ -3,9 +3,7 @@
   ### MIT
   
   ## Description
-  This Site provides an in depth look into the qualification of Obedia Lawrence
-  Providing Links to Github, LinkedIn, and Resume.
- 
+  
   ## Table of Contents
  * [Installation](#installation)
  * [Usage](#usage)
